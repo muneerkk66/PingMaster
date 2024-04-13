@@ -14,6 +14,17 @@
 		081500AE2BCA955000EE2F1C /* PingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500AD2BCA955000EE2F1C /* PingAppTests.swift */; };
 		081500B82BCA955000EE2F1C /* PingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500B72BCA955000EE2F1C /* PingAppUITests.swift */; };
 		081500BA2BCA955000EE2F1C /* PingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500B92BCA955000EE2F1C /* PingAppUITestsLaunchTests.swift */; };
+		081500C82BCA956B00EE2F1C /* NetworkPinger in Frameworks */ = {isa = PBXBuildFile; productRef = 081500C72BCA956B00EE2F1C /* NetworkPinger */; };
+		081500CC2BCACF2800EE2F1C /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500CB2BCACF2800EE2F1C /* Resolver.swift */; };
+		081500CF2BCACFEA00EE2F1C /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 081500CE2BCACFEA00EE2F1C /* Swinject */; };
+		081500DF2BCAD1C600EE2F1C /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500DE2BCAD1C600EE2F1C /* AppEnvironment.swift */; };
+		081500E12BCAD20C00EE2F1C /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500E02BCAD20C00EE2F1C /* APIRequest.swift */; };
+		081500E32BCAD24300EE2F1C /* APIEnvironment+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500E22BCAD24300EE2F1C /* APIEnvironment+Live.swift */; };
+		081500E52BCAD28700EE2F1C /* APIClient+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500E42BCAD28700EE2F1C /* APIClient+Live.swift */; };
+		081500E72BCAD2AF00EE2F1C /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500E62BCAD2AF00EE2F1C /* APIEnvironment.swift */; };
+		081500E92BCAD2DC00EE2F1C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500E82BCAD2DC00EE2F1C /* APIClient.swift */; };
+		081500EB2BCAD2F200EE2F1C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500EA2BCAD2F200EE2F1C /* APIError.swift */; };
+		081500ED2BCAD31900EE2F1C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500EC2BCAD31900EE2F1C /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,15 @@
 		081500B32BCA955000EE2F1C /* PingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		081500B72BCA955000EE2F1C /* PingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingAppUITests.swift; sourceTree = "<group>"; };
 		081500B92BCA955000EE2F1C /* PingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		081500CB2BCACF2800EE2F1C /* Resolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		081500DE2BCAD1C600EE2F1C /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		081500E02BCAD20C00EE2F1C /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		081500E22BCAD24300EE2F1C /* APIEnvironment+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEnvironment+Live.swift"; sourceTree = "<group>"; };
+		081500E42BCAD28700EE2F1C /* APIClient+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Live.swift"; sourceTree = "<group>"; };
+		081500E62BCAD2AF00EE2F1C /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		081500E82BCAD2DC00EE2F1C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		081500EA2BCAD2F200EE2F1C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		081500EC2BCAD31900EE2F1C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081500C82BCA956B00EE2F1C /* NetworkPinger in Frameworks */,
+				081500CF2BCACFEA00EE2F1C /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +116,12 @@
 		0815009B2BCA954F00EE2F1C /* PingApp */ = {
 			isa = PBXGroup;
 			children = (
+				081500C92BCACEF800EE2F1C /* Application */,
+				081500D02BCAD03100EE2F1C /* Data */,
+				081500D42BCAD06900EE2F1C /* Domain */,
+				081500D82BCAD09800EE2F1C /* Presentation */,
+				081500DC2BCAD0C200EE2F1C /* API */,
+				081500DD2BCAD0D700EE2F1C /* Utils */,
 				0815009C2BCA954F00EE2F1C /* PingAppApp.swift */,
 				0815009E2BCA954F00EE2F1C /* ContentView.swift */,
 				081500A02BCA955000EE2F1C /* Assets.xcassets */,
@@ -127,6 +155,137 @@
 			path = PingAppUITests;
 			sourceTree = "<group>";
 		};
+		081500C92BCACEF800EE2F1C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				081500CA2BCACF0600EE2F1C /* DI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		081500CA2BCACF0600EE2F1C /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				081500CB2BCACF2800EE2F1C /* Resolver.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		081500D02BCAD03100EE2F1C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				081500D32BCAD05500EE2F1C /* Repositories */,
+				081500D22BCAD04400EE2F1C /* Network */,
+				081500D12BCAD03E00EE2F1C /* Mapper */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		081500D12BCAD03E00EE2F1C /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		081500D22BCAD04400EE2F1C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		081500D32BCAD05500EE2F1C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		081500D42BCAD06900EE2F1C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				081500D72BCAD08E00EE2F1C /* UseCases */,
+				081500D62BCAD07D00EE2F1C /* Entities */,
+				081500D52BCAD07600EE2F1C /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		081500D52BCAD07600EE2F1C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		081500D62BCAD07D00EE2F1C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		081500D72BCAD08E00EE2F1C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		081500D82BCAD09800EE2F1C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				081500DB2BCAD0B400EE2F1C /* ReusableViews */,
+				081500DA2BCAD0A700EE2F1C /* AppCoordinator */,
+				081500D92BCAD0A100EE2F1C /* Screens */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		081500D92BCAD0A100EE2F1C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		081500DA2BCAD0A700EE2F1C /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		081500DB2BCAD0B400EE2F1C /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		081500DC2BCAD0C200EE2F1C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				081500E62BCAD2AF00EE2F1C /* APIEnvironment.swift */,
+				081500E22BCAD24300EE2F1C /* APIEnvironment+Live.swift */,
+				081500E02BCAD20C00EE2F1C /* APIRequest.swift */,
+				081500E42BCAD28700EE2F1C /* APIClient+Live.swift */,
+				081500DE2BCAD1C600EE2F1C /* AppEnvironment.swift */,
+				081500E82BCAD2DC00EE2F1C /* APIClient.swift */,
+				081500EA2BCAD2F200EE2F1C /* APIError.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		081500DD2BCAD0D700EE2F1C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				081500EC2BCAD31900EE2F1C /* Logger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +302,10 @@
 			dependencies = (
 			);
 			name = PingApp;
+			packageProductDependencies = (
+				081500C72BCA956B00EE2F1C /* NetworkPinger */,
+				081500CE2BCACFEA00EE2F1C /* Swinject */,
+			);
 			productName = PingApp;
 			productReference = 081500992BCA954F00EE2F1C /* PingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +378,10 @@
 				Base,
 			);
 			mainGroup = 081500902BCA954F00EE2F1C;
+			packageReferences = (
+				081500C62BCA956B00EE2F1C /* XCRemoteSwiftPackageReference "NetWorkPinger" */,
+				081500CD2BCACFEA00EE2F1C /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 0815009A2BCA954F00EE2F1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +424,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081500CC2BCACF2800EE2F1C /* Resolver.swift in Sources */,
+				081500ED2BCAD31900EE2F1C /* Logger.swift in Sources */,
+				081500DF2BCAD1C600EE2F1C /* AppEnvironment.swift in Sources */,
+				081500E52BCAD28700EE2F1C /* APIClient+Live.swift in Sources */,
+				081500EB2BCAD2F200EE2F1C /* APIError.swift in Sources */,
+				081500E32BCAD24300EE2F1C /* APIEnvironment+Live.swift in Sources */,
 				0815009F2BCA954F00EE2F1C /* ContentView.swift in Sources */,
+				081500E12BCAD20C00EE2F1C /* APIRequest.swift in Sources */,
+				081500E72BCAD2AF00EE2F1C /* APIEnvironment.swift in Sources */,
 				0815009D2BCA954F00EE2F1C /* PingAppApp.swift in Sources */,
+				081500E92BCAD2DC00EE2F1C /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +764,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		081500C62BCA956B00EE2F1C /* XCRemoteSwiftPackageReference "NetWorkPinger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/muneerkk66/NetWorkPinger.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		081500CD2BCACFEA00EE2F1C /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		081500C72BCA956B00EE2F1C /* NetworkPinger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 081500C62BCA956B00EE2F1C /* XCRemoteSwiftPackageReference "NetWorkPinger" */;
+			productName = NetworkPinger;
+		};
+		081500CE2BCACFEA00EE2F1C /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 081500CD2BCACFEA00EE2F1C /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 081500912BCA954F00EE2F1C /* Project object */;
 }

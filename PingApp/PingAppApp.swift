@@ -11,7 +11,9 @@ import SwiftUI
 struct PingAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			ContentView().onAppear {
+				
+			}
         }
     }
 }
