@@ -14,6 +14,7 @@ struct AppCoordinatorView: View {
         sceneView
             .onAppear {
                 coordinator.handle(.showMain)
+
             }
     }
 

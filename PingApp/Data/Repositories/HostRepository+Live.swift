@@ -17,6 +17,7 @@ final class HostRepositoryLive: HostRepository {
     }
 
     func loadAllHosts() -> AnyPublisher<[HostResponse], APIError> {
+        guard NetworkMonitor.shared.isConnected else { return Fail(error: APIError.connectionError).eraseToAnyPublisher()}
         return hostService
             .fetchAllHosts()
     }

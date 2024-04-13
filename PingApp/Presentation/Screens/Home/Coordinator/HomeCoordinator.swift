@@ -16,7 +16,7 @@ final class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeCoordinatorProtocol {
-    func showDetailView(latency: String) {
-        navigationPath.append(.details(latency))
+    func showDetailView(host: String) {
+        navigationPath.append(.details(host))
     }
 }

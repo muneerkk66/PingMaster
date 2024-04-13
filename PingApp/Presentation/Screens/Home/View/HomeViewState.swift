@@ -8,8 +8,11 @@
 import Foundation
 
 enum HomeViewEvent {
+    case onTapSorting
     case onTapItem(String)
     case retryLoadAllHosts
+    case onRetryHost(String)
+    case onTapShowRetry
     case loadAllHosts
 }
 

@@ -9,5 +9,5 @@ import Foundation
 
 @MainActor
 protocol HomeCoordinatorProtocol {
-    func showDetailView(latency: String)
+    func showDetailView(host: String)
 }

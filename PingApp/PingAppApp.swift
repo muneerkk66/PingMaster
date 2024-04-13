@@ -16,7 +16,9 @@ struct PingAppApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AppCoordinatorView()
+            AppCoordinatorView().onAppear {
+                NetworkMonitor.shared.startMonitoring()
+            }
         }
     }
 }

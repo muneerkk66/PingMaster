@@ -16,15 +16,9 @@ final class LatencyRepositoryLive: LatencyRepository {
         self.latencyService = latencyService
     }
 
-    func findHostsLatency(hosts: [String]) -> AnyPublisher<LatencyResult, APIError> {
+    func findHostsLatency(hosts: [String]) -> AnyPublisher<(String, Double?), Error> {
+        guard NetworkMonitor.shared.isConnected else { return Fail(error: APIError.connectionError).eraseToAnyPublisher()}
         return latencyService
             .findLatency(hosts: hosts)
-            .mapError {_ in
-                return APIError.connectionError
-            }
-            .map {(host, latency) -> LatencyResult in
-                let result = LatencyResult(host: host, latency: latency ?? 0, imageUrl: nil)
-                return result
-            }.eraseToAnyPublisher()
     }
 }

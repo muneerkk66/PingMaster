@@ -17,6 +17,8 @@ final class HomeViewModel: ObservableObject {
 
     @Published var latencyResults: [LatencyResult] = []
     @Published var viewState: HomeViewState = .idle
+    @Published var showRetry: Bool = false
+    private var isAscending = true
     private var disposables = Set<AnyCancellable>()
     private var hostResults: [HostResponse] = []
 
@@ -31,8 +33,20 @@ final class HomeViewModel: ObservableObject {
         switch event {
         case .loadAllHosts, .retryLoadAllHosts:
             fetchAllHostsData()
-        case .onTapItem(let latency):
-            coordinator.showDetailView(latency: latency)
+        case .onTapItem(let host):
+            if showRetry {
+                findLatency(hosts: [host])
+            } else {
+                coordinator.showDetailView(host: host)
+                showRetry = false
+            }
+        case .onTapSorting:
+            isAscending.toggle()
+            sortResult()
+        case .onRetryHost(let host):
+            findLatency(hosts: [host])
+        case .onTapShowRetry:
+            showRetry.toggle()
         }
     }
 
@@ -60,7 +74,6 @@ final class HomeViewModel: ObservableObject {
     }
 
     func findLatency(hosts: [String]) {
-        viewState = .isLoading
         findLatencyUseCase.execute(hosts: hosts)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] value in
@@ -73,13 +86,38 @@ final class HomeViewModel: ObservableObject {
                     viewState = .finished
                     break
                 }
-            }, receiveValue: { [weak self] result in
+            }, receiveValue: { [weak self] (host, latency) in
                 guard let self = self else { return }
-                let imageUrl = hostResults.first {$0.url == result.host}?.icon
-                let latency = LatencyResult(host: result.host, latency: result.latency, imageUrl: imageUrl)
-                latencyResults.append(latency)
+                if let index = self.latencyResults.firstIndex(where: { $0.host == host }) {
+                    // Host exists, update latency
+                    self.latencyResults[index].latency = latency ?? Double.greatestFiniteMagnitude
+                } else {
+                    // Host does not exist, add new LatencyResult
+                    if let hostResult = self.hostResults.first(where: { $0.url == host }) {
+                        let newLatencyResult = LatencyResult(name: hostResult.name, host: host, latency: latency ?? Double.greatestFiniteMagnitude, imageUrl: hostResult.icon)
+                        self.latencyResults.append(newLatencyResult)
+                    }
+                }
+                self.sortResult()
+
             })
             .store(in: &disposables)
+    }
+
+    func sortResult() {
+        latencyResults = latencyResults.sorted { first, second in
+            // Treat greatestFiniteMagnitude latency as the largest possible value so it sorts last
+            if first.latency == Double.greatestFiniteMagnitude {
+                return false
+            } else if second.latency == Double.greatestFiniteMagnitude {
+                return true
+            } else if isAscending {
+                return first.latency < second.latency
+            } else {
+                return first.latency > second.latency
+            }
+        }
+
     }
 
 }

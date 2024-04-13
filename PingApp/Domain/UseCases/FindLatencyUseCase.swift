@@ -8,7 +8,7 @@
 import Combine
 
 protocol FindLatencyUseCase {
-    func execute(hosts: [String]) -> AnyPublisher<LatencyResult, APIError>
+    func execute(hosts: [String]) -> AnyPublisher<(String, Double?), Error>
 }
 
 final class FindLatencyUseCaseLive: FindLatencyUseCase {
@@ -18,7 +18,7 @@ final class FindLatencyUseCaseLive: FindLatencyUseCase {
         self.latencyRepository = latencyRepository
     }
 
-    func execute(hosts: [String]) -> AnyPublisher<LatencyResult, APIError> {
+    func execute(hosts: [String]) -> AnyPublisher<(String, Double?), Error> {
         return latencyRepository.findHostsLatency(hosts: hosts)
     }
 }

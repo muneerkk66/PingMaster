@@ -40,7 +40,6 @@
 		0815010B2BCADA6600EE2F1C /* HostService+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815010A2BCADA6600EE2F1C /* HostService+Live.swift */; };
 		0815010D2BCADBE000EE2F1C /* HostRepository+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815010C2BCADBE000EE2F1C /* HostRepository+Live.swift */; };
 		0815010F2BCADC3600EE2F1C /* HostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815010E2BCADC3600EE2F1C /* HostsRepository.swift */; };
-		081501112BCADCED00EE2F1C /* HostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501102BCADCED00EE2F1C /* HostResult.swift */; };
 		081501132BCADE2500EE2F1C /* FetchAllHostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501122BCADE2500EE2F1C /* FetchAllHostsUseCase.swift */; };
 		081501152BCADEED00EE2F1C /* FindLatencyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501142BCADEED00EE2F1C /* FindLatencyUseCase.swift */; };
 		081501172BCADF8F00EE2F1C /* LatencyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501162BCADF8F00EE2F1C /* LatencyRepository.swift */; };
@@ -54,6 +53,11 @@
 		0815012B2BCAFFA400EE2F1C /* LatencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815012A2BCAFFA400EE2F1C /* LatencyView.swift */; };
 		0815012D2BCB003E00EE2F1C /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815012C2BCB003D00EE2F1C /* HostView.swift */; };
 		081501322BCB0B0D00EE2F1C /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 081501312BCB0B0D00EE2F1C /* NukeUI */; };
+		081501362BCB384E00EE2F1C /* HostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501352BCB384E00EE2F1C /* HostListView.swift */; };
+		081501382BCB392500EE2F1C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501372BCB392500EE2F1C /* ErrorView.swift */; };
+		0815013A2BCB394F00EE2F1C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501392BCB394F00EE2F1C /* Strings.swift */; };
+		0815013C2BCB3B5400EE2F1C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */; };
+		0815013E2BCB3D1C00EE2F1C /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815013D2BCB3D1C00EE2F1C /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +112,6 @@
 		0815010A2BCADA6600EE2F1C /* HostService+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HostService+Live.swift"; sourceTree = "<group>"; };
 		0815010C2BCADBE000EE2F1C /* HostRepository+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HostRepository+Live.swift"; sourceTree = "<group>"; };
 		0815010E2BCADC3600EE2F1C /* HostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsRepository.swift; sourceTree = "<group>"; };
-		081501102BCADCED00EE2F1C /* HostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostResult.swift; sourceTree = "<group>"; };
 		081501122BCADE2500EE2F1C /* FetchAllHostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllHostsUseCase.swift; sourceTree = "<group>"; };
 		081501142BCADEED00EE2F1C /* FindLatencyUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindLatencyUseCase.swift; sourceTree = "<group>"; };
 		081501162BCADF8F00EE2F1C /* LatencyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyRepository.swift; sourceTree = "<group>"; };
@@ -121,6 +124,11 @@
 		081501252BCAE62C00EE2F1C /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
 		0815012A2BCAFFA400EE2F1C /* LatencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyView.swift; sourceTree = "<group>"; };
 		0815012C2BCB003D00EE2F1C /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
+		081501352BCB384E00EE2F1C /* HostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostListView.swift; sourceTree = "<group>"; };
+		081501372BCB392500EE2F1C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		081501392BCB394F00EE2F1C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		0815013D2BCB3D1C00EE2F1C /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +251,6 @@
 			isa = PBXGroup;
 			children = (
 				081501082BCAD9E000EE2F1C /* HostResponse.swift */,
-				0815011E2BCAE19200EE2F1C /* LatencyResult.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -290,7 +297,7 @@
 		081500D62BCAD07D00EE2F1C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				081501102BCADCED00EE2F1C /* HostResult.swift */,
+				0815011E2BCAE19200EE2F1C /* LatencyResult.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -337,6 +344,7 @@
 		081500DB2BCAD0B400EE2F1C /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				081501372BCB392500EE2F1C /* ErrorView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -361,6 +369,9 @@
 				081500EC2BCAD31900EE2F1C /* Logger.swift */,
 				081500EE2BCAD3C100EE2F1C /* Parser.swift */,
 				081501202BCAE25600EE2F1C /* AppConstants.swift */,
+				081501392BCB394F00EE2F1C /* Strings.swift */,
+				0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */,
+				0815013D2BCB3D1C00EE2F1C /* Formatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -416,6 +427,7 @@
 			children = (
 				0815012A2BCAFFA400EE2F1C /* LatencyView.swift */,
 				0815012C2BCB003D00EE2F1C /* HostView.swift */,
+				081501352BCB384E00EE2F1C /* HostListView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -561,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				081501152BCADEED00EE2F1C /* FindLatencyUseCase.swift in Sources */,
+				0815013E2BCB3D1C00EE2F1C /* Formatter.swift in Sources */,
 				081500CC2BCACF2800EE2F1C /* Resolver.swift in Sources */,
 				081501262BCAE62C00EE2F1C /* HomeViewState.swift in Sources */,
 				081501092BCAD9E000EE2F1C /* HostResponse.swift in Sources */,
@@ -570,6 +583,7 @@
 				0815011D2BCAE0C300EE2F1C /* LatencyService+Live.swift in Sources */,
 				081500F42BCAD45A00EE2F1C /* Coordinator.swift in Sources */,
 				081501072BCAD93200EE2F1C /* HostService.swift in Sources */,
+				081501362BCB384E00EE2F1C /* HostListView.swift in Sources */,
 				081500FB2BCAD4DB00EE2F1C /* HomeCoordinator.swift in Sources */,
 				081500DF2BCAD1C600EE2F1C /* AppEnvironment.swift in Sources */,
 				081500E52BCAD28700EE2F1C /* APIClient+Live.swift in Sources */,
@@ -581,17 +595,19 @@
 				081501132BCADE2500EE2F1C /* FetchAllHostsUseCase.swift in Sources */,
 				081500F72BCAD45A00EE2F1C /* Routable.swift in Sources */,
 				0815010B2BCADA6600EE2F1C /* HostService+Live.swift in Sources */,
+				081501382BCB392500EE2F1C /* ErrorView.swift in Sources */,
 				081501242BCAE5D300EE2F1C /* HomeViewModel.swift in Sources */,
 				0815011B2BCAE0B500EE2F1C /* LatencyService.swift in Sources */,
 				081500FF2BCAD54200EE2F1C /* HomeCoordinatorView.swift in Sources */,
 				0815010D2BCADBE000EE2F1C /* HostRepository+Live.swift in Sources */,
 				081501052BCAD60000EE2F1C /* DetailView.swift in Sources */,
 				0815012D2BCB003E00EE2F1C /* HostView.swift in Sources */,
-				081501112BCADCED00EE2F1C /* HostResult.swift in Sources */,
+				0815013C2BCB3B5400EE2F1C /* NetworkMonitor.swift in Sources */,
 				081500E32BCAD24300EE2F1C /* APIEnvironment+Live.swift in Sources */,
 				0815009F2BCA954F00EE2F1C /* ContentView.swift in Sources */,
 				081500E12BCAD20C00EE2F1C /* APIRequest.swift in Sources */,
 				081501022BCAD58600EE2F1C /* HomeView.swift in Sources */,
+				0815013A2BCB394F00EE2F1C /* Strings.swift in Sources */,
 				0815010F2BCADC3600EE2F1C /* HostsRepository.swift in Sources */,
 				081500EF2BCAD3C100EE2F1C /* Parser.swift in Sources */,
 				081500E72BCAD2AF00EE2F1C /* APIEnvironment.swift in Sources */,

@@ -7,5 +7,5 @@
 
 import Combine
 protocol LatencyRepository {
-    func findHostsLatency(hosts: [String]) -> AnyPublisher<LatencyResult, APIError>
+    func findHostsLatency(hosts: [String]) -> AnyPublisher<(String, Double?), Error>
 }
