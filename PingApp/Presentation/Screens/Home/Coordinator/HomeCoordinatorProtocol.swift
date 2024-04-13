@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+@MainActor
+protocol HomeCoordinatorProtocol {
+    func showDetailView(name: String)
+}

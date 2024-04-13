@@ -25,6 +25,16 @@
 		081500E92BCAD2DC00EE2F1C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500E82BCAD2DC00EE2F1C /* APIClient.swift */; };
 		081500EB2BCAD2F200EE2F1C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500EA2BCAD2F200EE2F1C /* APIError.swift */; };
 		081500ED2BCAD31900EE2F1C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500EC2BCAD31900EE2F1C /* Logger.swift */; };
+		081500EF2BCAD3C100EE2F1C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500EE2BCAD3C100EE2F1C /* Parser.swift */; };
+		081500F42BCAD45A00EE2F1C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500F02BCAD45A00EE2F1C /* Coordinator.swift */; };
+		081500F52BCAD45A00EE2F1C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500F12BCAD45A00EE2F1C /* AppCoordinator.swift */; };
+		081500F62BCAD45A00EE2F1C /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500F22BCAD45A00EE2F1C /* AppCoordinatorView.swift */; };
+		081500F72BCAD45A00EE2F1C /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500F32BCAD45A00EE2F1C /* Routable.swift */; };
+		081500FB2BCAD4DB00EE2F1C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500FA2BCAD4DB00EE2F1C /* HomeCoordinator.swift */; };
+		081500FD2BCAD51E00EE2F1C /* HomeCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500FC2BCAD51E00EE2F1C /* HomeCoordinatorProtocol.swift */; };
+		081500FF2BCAD54200EE2F1C /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500FE2BCAD54200EE2F1C /* HomeCoordinatorView.swift */; };
+		081501022BCAD58600EE2F1C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501012BCAD58600EE2F1C /* HomeView.swift */; };
+		081501052BCAD60000EE2F1C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501042BCAD60000EE2F1C /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +74,16 @@
 		081500E82BCAD2DC00EE2F1C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		081500EA2BCAD2F200EE2F1C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		081500EC2BCAD31900EE2F1C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		081500EE2BCAD3C100EE2F1C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		081500F02BCAD45A00EE2F1C /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		081500F12BCAD45A00EE2F1C /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		081500F22BCAD45A00EE2F1C /* AppCoordinatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorView.swift; sourceTree = "<group>"; };
+		081500F32BCAD45A00EE2F1C /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		081500FA2BCAD4DB00EE2F1C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		081500FC2BCAD51E00EE2F1C /* HomeCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		081500FE2BCAD54200EE2F1C /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		081501012BCAD58600EE2F1C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		081501042BCAD60000EE2F1C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +266,8 @@
 		081500D92BCAD0A100EE2F1C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				081501032BCAD5E400EE2F1C /* DetailView */,
+				081500F82BCAD4A200EE2F1C /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -253,6 +275,10 @@
 		081500DA2BCAD0A700EE2F1C /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				081500F12BCAD45A00EE2F1C /* AppCoordinator.swift */,
+				081500F22BCAD45A00EE2F1C /* AppCoordinatorView.swift */,
+				081500F02BCAD45A00EE2F1C /* Coordinator.swift */,
+				081500F32BCAD45A00EE2F1C /* Routable.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -282,8 +308,44 @@
 			isa = PBXGroup;
 			children = (
 				081500EC2BCAD31900EE2F1C /* Logger.swift */,
+				081500EE2BCAD3C100EE2F1C /* Parser.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		081500F82BCAD4A200EE2F1C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				081501002BCAD56300EE2F1C /* View */,
+				081500F92BCAD4B100EE2F1C /* Coordinator */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		081500F92BCAD4B100EE2F1C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				081500FA2BCAD4DB00EE2F1C /* HomeCoordinator.swift */,
+				081500FC2BCAD51E00EE2F1C /* HomeCoordinatorProtocol.swift */,
+				081500FE2BCAD54200EE2F1C /* HomeCoordinatorView.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		081501002BCAD56300EE2F1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				081501012BCAD58600EE2F1C /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		081501032BCAD5E400EE2F1C /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				081501042BCAD60000EE2F1C /* DetailView.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,15 +488,25 @@
 			files = (
 				081500CC2BCACF2800EE2F1C /* Resolver.swift in Sources */,
 				081500ED2BCAD31900EE2F1C /* Logger.swift in Sources */,
+				081500F42BCAD45A00EE2F1C /* Coordinator.swift in Sources */,
+				081500FB2BCAD4DB00EE2F1C /* HomeCoordinator.swift in Sources */,
 				081500DF2BCAD1C600EE2F1C /* AppEnvironment.swift in Sources */,
 				081500E52BCAD28700EE2F1C /* APIClient+Live.swift in Sources */,
 				081500EB2BCAD2F200EE2F1C /* APIError.swift in Sources */,
+				081500F52BCAD45A00EE2F1C /* AppCoordinator.swift in Sources */,
+				081500F72BCAD45A00EE2F1C /* Routable.swift in Sources */,
+				081500FF2BCAD54200EE2F1C /* HomeCoordinatorView.swift in Sources */,
+				081501052BCAD60000EE2F1C /* DetailView.swift in Sources */,
 				081500E32BCAD24300EE2F1C /* APIEnvironment+Live.swift in Sources */,
 				0815009F2BCA954F00EE2F1C /* ContentView.swift in Sources */,
 				081500E12BCAD20C00EE2F1C /* APIRequest.swift in Sources */,
+				081501022BCAD58600EE2F1C /* HomeView.swift in Sources */,
+				081500EF2BCAD3C100EE2F1C /* Parser.swift in Sources */,
 				081500E72BCAD2AF00EE2F1C /* APIEnvironment.swift in Sources */,
 				0815009D2BCA954F00EE2F1C /* PingAppApp.swift in Sources */,
 				081500E92BCAD2DC00EE2F1C /* APIClient.swift in Sources */,
+				081500F62BCAD45A00EE2F1C /* AppCoordinatorView.swift in Sources */,
+				081500FD2BCAD51E00EE2F1C /* HomeCoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

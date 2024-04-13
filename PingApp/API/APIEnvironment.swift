@@ -7,6 +7,6 @@
 
 import Foundation
 protocol APIEnvironment {
-	var environment: AppEnvironment { get }
-	func set(to environment: AppEnvironment)
+    var environment: AppEnvironment { get }
+    func set(to environment: AppEnvironment)
 }

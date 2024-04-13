@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+final class HomeCoordinator: Coordinator {
+    enum Screen: Routable {
+        case details(String)
+    }
+    @Published var navigationPath = [Screen]()
+
+}
+
+extension HomeCoordinator: HomeCoordinatorProtocol {
+    func showDetailView(name: String) {
+        navigationPath.append(.details(name))
+    }
+}

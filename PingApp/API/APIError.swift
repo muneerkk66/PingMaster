@@ -8,28 +8,28 @@
 import Foundation
 
 enum APIError: LocalizedError {
-	case connectionError
-	case serverError(Error)
-	case applicationError
+    case connectionError
+    case serverError(Error)
+    case applicationError
 
-	var message: String {
-		switch self {
-		case .connectionError:
-			return "Connection error"
-		case .serverError, .applicationError:
-			return "Something went wrong"
-		}
-	}
+    var message: String {
+        switch self {
+        case .connectionError:
+            return "Connection error"
+        case .serverError, .applicationError:
+            return "Something went wrong"
+        }
+    }
 }
 
 extension Error {
-	var applicationError: APIError {
-		if let error = self as? URLError {
-			return error.code == .notConnectedToInternet
-				? .connectionError
-				: .serverError(error)
-		} else {
-			return .applicationError
-		}
-	}
+    var applicationError: APIError {
+        if let error = self as? URLError {
+            return error.code == .notConnectedToInternet
+                ? .connectionError
+                : .serverError(error)
+        } else {
+            return .applicationError
+        }
+    }
 }
