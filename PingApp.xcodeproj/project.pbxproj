@@ -35,6 +35,25 @@
 		081500FF2BCAD54200EE2F1C /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500FE2BCAD54200EE2F1C /* HomeCoordinatorView.swift */; };
 		081501022BCAD58600EE2F1C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501012BCAD58600EE2F1C /* HomeView.swift */; };
 		081501052BCAD60000EE2F1C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501042BCAD60000EE2F1C /* DetailView.swift */; };
+		081501072BCAD93200EE2F1C /* HostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501062BCAD93200EE2F1C /* HostService.swift */; };
+		081501092BCAD9E000EE2F1C /* HostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501082BCAD9E000EE2F1C /* HostResponse.swift */; };
+		0815010B2BCADA6600EE2F1C /* HostService+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815010A2BCADA6600EE2F1C /* HostService+Live.swift */; };
+		0815010D2BCADBE000EE2F1C /* HostRepository+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815010C2BCADBE000EE2F1C /* HostRepository+Live.swift */; };
+		0815010F2BCADC3600EE2F1C /* HostsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815010E2BCADC3600EE2F1C /* HostsRepository.swift */; };
+		081501112BCADCED00EE2F1C /* HostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501102BCADCED00EE2F1C /* HostResult.swift */; };
+		081501132BCADE2500EE2F1C /* FetchAllHostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501122BCADE2500EE2F1C /* FetchAllHostsUseCase.swift */; };
+		081501152BCADEED00EE2F1C /* FindLatencyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501142BCADEED00EE2F1C /* FindLatencyUseCase.swift */; };
+		081501172BCADF8F00EE2F1C /* LatencyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501162BCADF8F00EE2F1C /* LatencyRepository.swift */; };
+		081501192BCADFF500EE2F1C /* LatencyRepository+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501182BCADFF500EE2F1C /* LatencyRepository+Live.swift */; };
+		0815011B2BCAE0B500EE2F1C /* LatencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815011A2BCAE0B500EE2F1C /* LatencyService.swift */; };
+		0815011D2BCAE0C300EE2F1C /* LatencyService+Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815011C2BCAE0C300EE2F1C /* LatencyService+Live.swift */; };
+		0815011F2BCAE19200EE2F1C /* LatencyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815011E2BCAE19200EE2F1C /* LatencyResult.swift */; };
+		081501212BCAE25600EE2F1C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501202BCAE25600EE2F1C /* AppConstants.swift */; };
+		081501242BCAE5D300EE2F1C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501232BCAE5D300EE2F1C /* HomeViewModel.swift */; };
+		081501262BCAE62C00EE2F1C /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501252BCAE62C00EE2F1C /* HomeViewState.swift */; };
+		0815012B2BCAFFA400EE2F1C /* LatencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815012A2BCAFFA400EE2F1C /* LatencyView.swift */; };
+		0815012D2BCB003E00EE2F1C /* HostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815012C2BCB003D00EE2F1C /* HostView.swift */; };
+		081501322BCB0B0D00EE2F1C /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 081501312BCB0B0D00EE2F1C /* NukeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +103,24 @@
 		081500FE2BCAD54200EE2F1C /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
 		081501012BCAD58600EE2F1C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		081501042BCAD60000EE2F1C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		081501062BCAD93200EE2F1C /* HostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostService.swift; sourceTree = "<group>"; };
+		081501082BCAD9E000EE2F1C /* HostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostResponse.swift; sourceTree = "<group>"; };
+		0815010A2BCADA6600EE2F1C /* HostService+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HostService+Live.swift"; sourceTree = "<group>"; };
+		0815010C2BCADBE000EE2F1C /* HostRepository+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HostRepository+Live.swift"; sourceTree = "<group>"; };
+		0815010E2BCADC3600EE2F1C /* HostsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostsRepository.swift; sourceTree = "<group>"; };
+		081501102BCADCED00EE2F1C /* HostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostResult.swift; sourceTree = "<group>"; };
+		081501122BCADE2500EE2F1C /* FetchAllHostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAllHostsUseCase.swift; sourceTree = "<group>"; };
+		081501142BCADEED00EE2F1C /* FindLatencyUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindLatencyUseCase.swift; sourceTree = "<group>"; };
+		081501162BCADF8F00EE2F1C /* LatencyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyRepository.swift; sourceTree = "<group>"; };
+		081501182BCADFF500EE2F1C /* LatencyRepository+Live.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LatencyRepository+Live.swift"; sourceTree = "<group>"; };
+		0815011A2BCAE0B500EE2F1C /* LatencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyService.swift; sourceTree = "<group>"; };
+		0815011C2BCAE0C300EE2F1C /* LatencyService+Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LatencyService+Live.swift"; sourceTree = "<group>"; };
+		0815011E2BCAE19200EE2F1C /* LatencyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyResult.swift; sourceTree = "<group>"; };
+		081501202BCAE25600EE2F1C /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		081501232BCAE5D300EE2F1C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		081501252BCAE62C00EE2F1C /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
+		0815012A2BCAFFA400EE2F1C /* LatencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatencyView.swift; sourceTree = "<group>"; };
+		0815012C2BCB003D00EE2F1C /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081501322BCB0B0D00EE2F1C /* NukeUI in Frameworks */,
 				081500C82BCA956B00EE2F1C /* NetworkPinger in Frameworks */,
 				081500CF2BCACFEA00EE2F1C /* Swinject in Frameworks */,
 			);
@@ -204,6 +242,8 @@
 		081500D12BCAD03E00EE2F1C /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
+				081501082BCAD9E000EE2F1C /* HostResponse.swift */,
+				0815011E2BCAE19200EE2F1C /* LatencyResult.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -211,6 +251,10 @@
 		081500D22BCAD04400EE2F1C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				081501062BCAD93200EE2F1C /* HostService.swift */,
+				0815010A2BCADA6600EE2F1C /* HostService+Live.swift */,
+				0815011A2BCAE0B500EE2F1C /* LatencyService.swift */,
+				0815011C2BCAE0C300EE2F1C /* LatencyService+Live.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -218,6 +262,8 @@
 		081500D32BCAD05500EE2F1C /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				081501182BCADFF500EE2F1C /* LatencyRepository+Live.swift */,
+				0815010C2BCADBE000EE2F1C /* HostRepository+Live.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -235,6 +281,8 @@
 		081500D52BCAD07600EE2F1C /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				0815010E2BCADC3600EE2F1C /* HostsRepository.swift */,
+				081501162BCADF8F00EE2F1C /* LatencyRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -242,6 +290,7 @@
 		081500D62BCAD07D00EE2F1C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				081501102BCADCED00EE2F1C /* HostResult.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -249,6 +298,8 @@
 		081500D72BCAD08E00EE2F1C /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				081501142BCADEED00EE2F1C /* FindLatencyUseCase.swift */,
+				081501122BCADE2500EE2F1C /* FetchAllHostsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -309,6 +360,7 @@
 			children = (
 				081500EC2BCAD31900EE2F1C /* Logger.swift */,
 				081500EE2BCAD3C100EE2F1C /* Parser.swift */,
+				081501202BCAE25600EE2F1C /* AppConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -316,6 +368,7 @@
 		081500F82BCAD4A200EE2F1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				081501222BCAE5C400EE2F1C /* ViewModel */,
 				081501002BCAD56300EE2F1C /* View */,
 				081500F92BCAD4B100EE2F1C /* Coordinator */,
 			);
@@ -335,7 +388,9 @@
 		081501002BCAD56300EE2F1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				081501292BCAFF8D00EE2F1C /* Components */,
 				081501012BCAD58600EE2F1C /* HomeView.swift */,
+				081501252BCAE62C00EE2F1C /* HomeViewState.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +401,23 @@
 				081501042BCAD60000EE2F1C /* DetailView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		081501222BCAE5C400EE2F1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				081501232BCAE5D300EE2F1C /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		081501292BCAFF8D00EE2F1C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0815012A2BCAFFA400EE2F1C /* LatencyView.swift */,
+				0815012C2BCB003D00EE2F1C /* HostView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +439,7 @@
 			packageProductDependencies = (
 				081500C72BCA956B00EE2F1C /* NetworkPinger */,
 				081500CE2BCACFEA00EE2F1C /* Swinject */,
+				081501312BCB0B0D00EE2F1C /* NukeUI */,
 			);
 			productName = PingApp;
 			productReference = 081500992BCA954F00EE2F1C /* PingApp.app */;
@@ -443,6 +516,7 @@
 			packageReferences = (
 				081500C62BCA956B00EE2F1C /* XCRemoteSwiftPackageReference "NetWorkPinger" */,
 				081500CD2BCACFEA00EE2F1C /* XCRemoteSwiftPackageReference "Swinject" */,
+				081501302BCB0B0D00EE2F1C /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 0815009A2BCA954F00EE2F1C /* Products */;
 			projectDirPath = "";
@@ -486,21 +560,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081501152BCADEED00EE2F1C /* FindLatencyUseCase.swift in Sources */,
 				081500CC2BCACF2800EE2F1C /* Resolver.swift in Sources */,
+				081501262BCAE62C00EE2F1C /* HomeViewState.swift in Sources */,
+				081501092BCAD9E000EE2F1C /* HostResponse.swift in Sources */,
 				081500ED2BCAD31900EE2F1C /* Logger.swift in Sources */,
+				081501212BCAE25600EE2F1C /* AppConstants.swift in Sources */,
+				081501192BCADFF500EE2F1C /* LatencyRepository+Live.swift in Sources */,
+				0815011D2BCAE0C300EE2F1C /* LatencyService+Live.swift in Sources */,
 				081500F42BCAD45A00EE2F1C /* Coordinator.swift in Sources */,
+				081501072BCAD93200EE2F1C /* HostService.swift in Sources */,
 				081500FB2BCAD4DB00EE2F1C /* HomeCoordinator.swift in Sources */,
 				081500DF2BCAD1C600EE2F1C /* AppEnvironment.swift in Sources */,
 				081500E52BCAD28700EE2F1C /* APIClient+Live.swift in Sources */,
+				0815011F2BCAE19200EE2F1C /* LatencyResult.swift in Sources */,
 				081500EB2BCAD2F200EE2F1C /* APIError.swift in Sources */,
+				081501172BCADF8F00EE2F1C /* LatencyRepository.swift in Sources */,
+				0815012B2BCAFFA400EE2F1C /* LatencyView.swift in Sources */,
 				081500F52BCAD45A00EE2F1C /* AppCoordinator.swift in Sources */,
+				081501132BCADE2500EE2F1C /* FetchAllHostsUseCase.swift in Sources */,
 				081500F72BCAD45A00EE2F1C /* Routable.swift in Sources */,
+				0815010B2BCADA6600EE2F1C /* HostService+Live.swift in Sources */,
+				081501242BCAE5D300EE2F1C /* HomeViewModel.swift in Sources */,
+				0815011B2BCAE0B500EE2F1C /* LatencyService.swift in Sources */,
 				081500FF2BCAD54200EE2F1C /* HomeCoordinatorView.swift in Sources */,
+				0815010D2BCADBE000EE2F1C /* HostRepository+Live.swift in Sources */,
 				081501052BCAD60000EE2F1C /* DetailView.swift in Sources */,
+				0815012D2BCB003E00EE2F1C /* HostView.swift in Sources */,
+				081501112BCADCED00EE2F1C /* HostResult.swift in Sources */,
 				081500E32BCAD24300EE2F1C /* APIEnvironment+Live.swift in Sources */,
 				0815009F2BCA954F00EE2F1C /* ContentView.swift in Sources */,
 				081500E12BCAD20C00EE2F1C /* APIRequest.swift in Sources */,
 				081501022BCAD58600EE2F1C /* HomeView.swift in Sources */,
+				0815010F2BCADC3600EE2F1C /* HostsRepository.swift in Sources */,
 				081500EF2BCAD3C100EE2F1C /* Parser.swift in Sources */,
 				081500E72BCAD2AF00EE2F1C /* APIEnvironment.swift in Sources */,
 				0815009D2BCA954F00EE2F1C /* PingAppApp.swift in Sources */,
@@ -854,6 +946,14 @@
 				minimumVersion = 2.8.6;
 			};
 		};
+		081501302BCB0B0D00EE2F1C /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -866,6 +966,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 081500CD2BCACFEA00EE2F1C /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		081501312BCB0B0D00EE2F1C /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 081501302BCB0B0D00EE2F1C /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

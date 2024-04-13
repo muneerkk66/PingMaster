@@ -6,3 +6,6 @@
 //
 
 import Foundation
+enum AppConstants {
+    static let pingCount = 5
+}

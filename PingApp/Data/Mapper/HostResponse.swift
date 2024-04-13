@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct HostResponseModel: Decodable {
-	let name: String
-	let url: String
-	let icon: URL
+struct HostResponse: Decodable {
+    let name: String
+    let url: String
+    let icon: String
 
-	enum CodingKeys: String, CodingKey {
-		case name, url, icon
-	}
+    enum CodingKeys: String, CodingKey {
+        case name, url, icon
+    }
 }

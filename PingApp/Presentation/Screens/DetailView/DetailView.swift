@@ -7,15 +7,13 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct DetailView: View {
-	let latency: String
-	var body: some View {
-		Text("\(latency)")
-	}
+    let latency: String
+    var body: some View {
+        Text("\(latency)")
+    }
 }
 
 #Preview {
-	DetailView(latency: "Test")
+    DetailView(latency: "Test")
 }

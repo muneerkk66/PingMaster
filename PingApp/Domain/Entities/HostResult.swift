@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct HostResult {
+    let host: String
+    let imageUrl: String
+    let latency: Double
+}

@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject var viewModel: HomeViewModel = Resolver.shared.resolve(HomeViewModel.self)
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.latencyResults, id: \.host) { latency in
+            HostView(latency: latency)
+        }.onAppear {
+            viewModel.handle(.loadAllHosts)
+        }
     }
 }
 

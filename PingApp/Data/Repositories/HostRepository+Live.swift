@@ -6,11 +6,18 @@
 //
 
 import Foundation
+import Combine
 
 final class HostRepositoryLive: HostRepository {
 
-	private let hostService: HostService
+    private let hostService: HostService
 
-	init(hostService: HostService) {
-		self.hostService = hostService
-	}
+    init(hostService: HostService) {
+        self.hostService = hostService
+    }
+
+    func loadAllHosts() -> AnyPublisher<[HostResponse], APIError> {
+        return hostService
+            .fetchAllHosts()
+    }
+}

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import Combine
+
+protocol HostService {
+    @discardableResult
+    func fetchAllHosts(
+    ) -> AnyPublisher<[HostResponse], APIError>
+}
