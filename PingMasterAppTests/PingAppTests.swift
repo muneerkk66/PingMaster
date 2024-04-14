@@ -7,7 +7,7 @@
 
 import XCTest
 import SnapshotTesting
-@testable import PingApp
+@testable import PingMaster
 
 @MainActor
 final class PingAppTests: XCTestCase {

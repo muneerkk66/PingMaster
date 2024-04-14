@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import PingApp
+@testable import PingMaster
 import Combine
 
 // Mock FindLatencyUseCase for testing

@@ -6,7 +6,7 @@
 //
 import XCTest
 import Foundation
-@testable import PingApp
+@testable import PingMaster
 
 final class HostServiceTests: XCTestCase {
     var model: HostServiceLive!

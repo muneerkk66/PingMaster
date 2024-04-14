@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import PingApp
+@testable import PingMaster
 
 struct MockHomeCoordinator: HomeCoordinatorProtocol {
     func showDetailView(host: String) {}

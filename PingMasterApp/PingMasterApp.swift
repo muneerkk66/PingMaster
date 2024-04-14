@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct PingAppApp: App {
+struct PingMasterApp: App {
     init() {
         // Injecting all dependencies
         Resolver.shared.injectModules()

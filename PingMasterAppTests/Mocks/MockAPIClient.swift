@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-@testable import PingApp
+@testable import PingMaster
 import Network
 
 // Mock class to replace the actual implementation of APIClient

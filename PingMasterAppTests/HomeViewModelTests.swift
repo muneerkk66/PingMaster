@@ -7,7 +7,7 @@
 
 import XCTest
 import Foundation
-@testable import PingApp
+@testable import PingMaster
 
 @MainActor
 class HomeViewModelTests: XCTestCase {

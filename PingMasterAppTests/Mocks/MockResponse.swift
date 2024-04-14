@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import PingApp
+@testable import PingMaster
 struct MockResponse {
     static let hostResponse = HostResponse(name: "name", url: "www.google.com", icon: "")
     static let latencyResponse = ("www.google.com", 0.001)
