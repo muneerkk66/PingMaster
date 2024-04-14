@@ -54,7 +54,6 @@
 		081501322BCB0B0D00EE2F1C /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 081501312BCB0B0D00EE2F1C /* NukeUI */; };
 		081501362BCB384E00EE2F1C /* HostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501352BCB384E00EE2F1C /* HostListView.swift */; };
 		081501382BCB392500EE2F1C /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501372BCB392500EE2F1C /* ErrorView.swift */; };
-		0815013A2BCB394F00EE2F1C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501392BCB394F00EE2F1C /* Strings.swift */; };
 		0815013C2BCB3B5400EE2F1C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */; };
 		0815013E2BCB3D1C00EE2F1C /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815013D2BCB3D1C00EE2F1C /* Formatter.swift */; };
 		081501412BCB45DA00EE2F1C /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 081501402BCB45DA00EE2F1C /* SnapshotTesting */; };
@@ -67,6 +66,7 @@
 		081501512BCB4A7800EE2F1C /* HostServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501502BCB4A7800EE2F1C /* HostServiceTests.swift */; };
 		081501532BCB4AD000EE2F1C /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501522BCB4AD000EE2F1C /* MockAPIClient.swift */; };
 		081501572BCB56A300EE2F1C /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */; };
+		0822C8712BCBCA8B00653580 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0822C8702BCBCA8B00653580 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,7 +134,6 @@
 		0815012C2BCB003D00EE2F1C /* HostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostView.swift; sourceTree = "<group>"; };
 		081501352BCB384E00EE2F1C /* HostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostListView.swift; sourceTree = "<group>"; };
 		081501372BCB392500EE2F1C /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		081501392BCB394F00EE2F1C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		0815013D2BCB3D1C00EE2F1C /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		081501432BCB462600EE2F1C /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		081501502BCB4A7800EE2F1C /* HostServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostServiceTests.swift; sourceTree = "<group>"; };
 		081501522BCB4AD000EE2F1C /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		0822C8702BCBCA8B00653580 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,8 +206,8 @@
 				081500D82BCAD09800EE2F1C /* Presentation */,
 				081500DC2BCAD0C200EE2F1C /* API */,
 				081500DD2BCAD0D700EE2F1C /* Utils */,
+				0822C86F2BCBCA6700653580 /* Resources */,
 				0815009C2BCA954F00EE2F1C /* PingAppApp.swift */,
-				081500A02BCA955000EE2F1C /* Assets.xcassets */,
 				081500A22BCA955000EE2F1C /* Preview Content */,
 			);
 			path = PingApp;
@@ -390,7 +390,6 @@
 				081500EC2BCAD31900EE2F1C /* Logger.swift */,
 				081500EE2BCAD3C100EE2F1C /* Parser.swift */,
 				081501202BCAE25600EE2F1C /* AppConstants.swift */,
-				081501392BCB394F00EE2F1C /* Strings.swift */,
 				0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */,
 				0815013D2BCB3D1C00EE2F1C /* Formatter.swift */,
 			);
@@ -472,6 +471,15 @@
 				081501522BCB4AD000EE2F1C /* MockAPIClient.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		0822C86F2BCBCA6700653580 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				081500A02BCA955000EE2F1C /* Assets.xcassets */,
+				0822C8702BCBCA8B00653580 /* Localizable.xcstrings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,6 +602,7 @@
 			files = (
 				081500A42BCA955000EE2F1C /* Preview Assets.xcassets in Resources */,
 				081500A12BCA955000EE2F1C /* Assets.xcassets in Resources */,
+				0822C8712BCBCA8B00653580 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,7 +661,6 @@
 				081500E32BCAD24300EE2F1C /* APIEnvironment+Live.swift in Sources */,
 				081500E12BCAD20C00EE2F1C /* APIRequest.swift in Sources */,
 				081501022BCAD58600EE2F1C /* HomeView.swift in Sources */,
-				0815013A2BCB394F00EE2F1C /* Strings.swift in Sources */,
 				0815010F2BCADC3600EE2F1C /* HostsRepository.swift in Sources */,
 				081500EF2BCAD3C100EE2F1C /* Parser.swift in Sources */,
 				081500E72BCAD2AF00EE2F1C /* APIEnvironment.swift in Sources */,

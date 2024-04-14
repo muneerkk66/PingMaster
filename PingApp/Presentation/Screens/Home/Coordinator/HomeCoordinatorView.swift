@@ -16,7 +16,7 @@ struct HomeCoordinatorView: View {
                 .navigationDestination(for: HomeCoordinator.Screen.self) {
                     destination($0)
                 }
-                .navigationTitle("PingApp")
+                .navigationTitle("app.title")
         }
     }
 

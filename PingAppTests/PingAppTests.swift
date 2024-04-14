@@ -20,6 +20,11 @@ final class PingAppTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testCoordinatorView ( ) {
+        let contentView = HomeCoordinatorView()
+        assertSnapshot(of: contentView.toVC(), as: .image, timeout: 10)
+    }
+
     func testDefaultAppearanceWithSuccess ( ) {
         let contentView = HomeView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse)))
 

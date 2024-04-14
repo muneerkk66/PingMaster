@@ -41,6 +41,12 @@ class HomeViewModelTests: XCTestCase {
         XCTAssertTrue(!viewModel.isAscending)
     }
 
+    func testShowRetry() {
+        XCTAssertTrue(!viewModel.showRetry)
+        viewModel.handle(.onTapShowRetry)
+        XCTAssertTrue(viewModel.showRetry)
+    }
+
     func testRetryLoadAllLatency() throws {
         viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse))
 

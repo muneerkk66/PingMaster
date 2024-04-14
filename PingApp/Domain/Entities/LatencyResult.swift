@@ -18,10 +18,10 @@ extension LatencyResult {
     var latencyValueInMS: String {
         // If host is not reachable
         if latency == Double.greatestFiniteMagnitude {
-            return "Not reachable"
+            return NSLocalizedString("host.latencyError", comment: "Latency error")
         }
         // Converting into ms
         let value = latency * 1000
-        return "\(value.latency ?? "0") ms"
+        return "\(value.formattedLatency ?? "0") ms"
     }
 }

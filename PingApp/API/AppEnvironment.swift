@@ -7,6 +7,9 @@
 
 import Foundation
 
+// MARK: This file facilitates the management of API endpoints and their associated keys. For enhanced security, Arakana encryption is utilized for handling API keys.
+// MARK: Store your keys and secrets away from your source code ,use Arkana keys : https://github.com/rogerluan/arkana
+
 enum AppEnvironment: String, Codable, CaseIterable {
     case development = "dev"
     case qa

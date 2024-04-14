@@ -29,7 +29,8 @@ struct HomeView: View {
                     Image(systemName: "goforward").resizable() .foregroundColor(.blue).frame(width: 20, height: 20)
                 }
             }
-        }.environmentObject(viewModel)
+        }
+        .environmentObject(viewModel)
     }
 
     @ViewBuilder

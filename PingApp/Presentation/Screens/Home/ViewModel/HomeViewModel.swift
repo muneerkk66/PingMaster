@@ -89,10 +89,8 @@ final class HomeViewModel: ObservableObject {
             }, receiveValue: { [weak self] (host, latency) in
                 guard let self = self else { return }
                 if let index = self.latencyResults.firstIndex(where: { $0.host == host }) {
-                    // Host exists, update latency
                     self.latencyResults[index].latency = latency ?? Double.greatestFiniteMagnitude
                 } else {
-                    // Host does not exist, add new LatencyResult
                     if let hostResult = self.hostResults.first(where: { $0.url == host }) {
                         let newLatencyResult = LatencyResult(name: hostResult.name, host: host, latency: latency ?? Double.greatestFiniteMagnitude, imageUrl: hostResult.icon)
                         self.latencyResults.append(newLatencyResult)
@@ -104,6 +102,7 @@ final class HomeViewModel: ObservableObject {
             .store(in: &disposables)
     }
 
+    // TODO: This can be improved by using a new use case for sorting.
     func sortResult() {
         latencyResults = latencyResults.sorted { first, second in
             // Treat greatestFiniteMagnitude latency as the largest possible value so it sorts last
