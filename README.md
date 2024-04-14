@@ -86,6 +86,7 @@ iOS Project implemented with Clean Layered Architecture and MVVM-Coordinator pat
 ### Required
 1. Add UI test.
 2. Improve unit test coverage 
+3. Add support for Dark mode
 
 ### Tools have the capacity to be incorporated.
  1. - [Arkana](https://github.com/rogerluan/arkana) is used to handle/manage/store project keys secretely.
