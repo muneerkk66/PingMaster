@@ -116,6 +116,10 @@ extension Resolver {
             FindLatencyUseCaseLive(latencyRepository: resolver.resolve(LatencyRepositoryLive.self)!)
         }.inObjectScope(.container)
 
+        container.register(SortLatencyListUseCaseLive.self) { _ in
+            SortLatencyListUseCaseLive()
+        }.inObjectScope(.container)
+
     }
 }
 
@@ -126,7 +130,7 @@ extension Resolver {
     @MainActor
     private func injectViewModels() {
         container.register(HomeViewModel.self) { resolver in
-            HomeViewModel(coordinator: resolver.resolve(HomeCoordinator.self)!, fetchHostsUseCase: resolver.resolve(FetchAllHostsUseCaseLive.self)!, findLatencyUseCase: resolver.resolve(FindLatencyUseCaseLive.self)!)
+            HomeViewModel(coordinator: resolver.resolve(HomeCoordinator.self)!, fetchHostsUseCase: resolver.resolve(FetchAllHostsUseCaseLive.self)!, findLatencyUseCase: resolver.resolve(FindLatencyUseCaseLive.self)!, sortLatencyListUseCase: resolver.resolve(SortLatencyListUseCaseLive.self)!)
         }
     }
 }

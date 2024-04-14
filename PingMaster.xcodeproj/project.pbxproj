@@ -10,7 +10,7 @@
 		0815009D2BCA954F00EE2F1C /* PingMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815009C2BCA954F00EE2F1C /* PingMasterApp.swift */; };
 		081500A12BCA955000EE2F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081500A02BCA955000EE2F1C /* Assets.xcassets */; };
 		081500A42BCA955000EE2F1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081500A32BCA955000EE2F1C /* Preview Assets.xcassets */; };
-		081500AE2BCA955000EE2F1C /* PingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500AD2BCA955000EE2F1C /* PingAppTests.swift */; };
+		081500AE2BCA955000EE2F1C /* PingMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500AD2BCA955000EE2F1C /* PingMasterTests.swift */; };
 		081500B82BCA955000EE2F1C /* PingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500B72BCA955000EE2F1C /* PingAppUITests.swift */; };
 		081500BA2BCA955000EE2F1C /* PingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500B92BCA955000EE2F1C /* PingAppUITestsLaunchTests.swift */; };
 		081500CC2BCACF2800EE2F1C /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500CB2BCACF2800EE2F1C /* Resolver.swift */; };
@@ -68,6 +68,8 @@
 		086F560E2BCBDB1F00B873AA /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 086F560D2BCBDB1F00B873AA /* NukeUI */; };
 		086F56112BCBDB2800B873AA /* NetworkPinger in Frameworks */ = {isa = PBXBuildFile; productRef = 086F56102BCBDB2800B873AA /* NetworkPinger */; };
 		086F56142BCBDB6B00B873AA /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 086F56132BCBDB6B00B873AA /* Swinject */; };
+		086F56172BCBFAAE00B873AA /* SortLatencyListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F56162BCBFAAE00B873AA /* SortLatencyListUseCase.swift */; };
+		086F56192BCBFC2400B873AA /* MockSortLatencyListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086F56182BCBFC2400B873AA /* MockSortLatencyListUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +95,7 @@
 		081500A02BCA955000EE2F1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		081500A32BCA955000EE2F1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		081500A92BCA955000EE2F1C /* PingMasterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingMasterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		081500AD2BCA955000EE2F1C /* PingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingAppTests.swift; sourceTree = "<group>"; };
+		081500AD2BCA955000EE2F1C /* PingMasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingMasterTests.swift; sourceTree = "<group>"; };
 		081500B32BCA955000EE2F1C /* PingMasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingMasterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		081500B72BCA955000EE2F1C /* PingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingAppUITests.swift; sourceTree = "<group>"; };
 		081500B92BCA955000EE2F1C /* PingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -149,6 +151,8 @@
 		0822C8702BCBCA8B00653580 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0822C8722BCBD56000653580 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		086F56152BCBDBE300B873AA /* PingMaster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PingMaster-Info.plist"; sourceTree = "<group>"; };
+		086F56162BCBFAAE00B873AA /* SortLatencyListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortLatencyListUseCase.swift; sourceTree = "<group>"; };
+		086F56182BCBFC2400B873AA /* MockSortLatencyListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSortLatencyListUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,7 +235,7 @@
 			children = (
 				081501472BCB46B000EE2F1C /* Mocks */,
 				081501422BCB461200EE2F1C /* Utils */,
-				081500AD2BCA955000EE2F1C /* PingAppTests.swift */,
+				081500AD2BCA955000EE2F1C /* PingMasterTests.swift */,
 				081501502BCB4A7800EE2F1C /* HostServiceTests.swift */,
 				081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */,
 			);
@@ -331,6 +335,7 @@
 		081500D72BCAD08E00EE2F1C /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				086F56162BCBFAAE00B873AA /* SortLatencyListUseCase.swift */,
 				081501142BCADEED00EE2F1C /* FindLatencyUseCase.swift */,
 				081501122BCADE2500EE2F1C /* FetchAllHostsUseCase.swift */,
 			);
@@ -469,6 +474,7 @@
 		081501472BCB46B000EE2F1C /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				086F56182BCBFC2400B873AA /* MockSortLatencyListUseCase.swift */,
 				0815014E2BCB486500EE2F1C /* MockFindLatencyUseCase.swift */,
 				081501482BCB46BF00EE2F1C /* MockCoordinator.swift */,
 				0815014A2BCB470C00EE2F1C /* MockFetchHostsUseCase.swift */,
@@ -649,6 +655,7 @@
 				081500DF2BCAD1C600EE2F1C /* AppEnvironment.swift in Sources */,
 				081500E52BCAD28700EE2F1C /* APIClient+Live.swift in Sources */,
 				0815011F2BCAE19200EE2F1C /* LatencyResult.swift in Sources */,
+				086F56172BCBFAAE00B873AA /* SortLatencyListUseCase.swift in Sources */,
 				081500EB2BCAD2F200EE2F1C /* APIError.swift in Sources */,
 				081501172BCADF8F00EE2F1C /* LatencyRepository.swift in Sources */,
 				0815012B2BCAFFA400EE2F1C /* LatencyView.swift in Sources */,
@@ -673,6 +680,7 @@
 				0815009D2BCA954F00EE2F1C /* PingMasterApp.swift in Sources */,
 				081500E92BCAD2DC00EE2F1C /* APIClient.swift in Sources */,
 				081500F62BCAD45A00EE2F1C /* AppCoordinatorView.swift in Sources */,
+				086F56192BCBFC2400B873AA /* MockSortLatencyListUseCase.swift in Sources */,
 				081500FD2BCAD51E00EE2F1C /* HomeCoordinatorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,7 +695,7 @@
 				081501512BCB4A7800EE2F1C /* HostServiceTests.swift in Sources */,
 				081501462BCB464400EE2F1C /* CombinePublisherTest.swift in Sources */,
 				081501572BCB56A300EE2F1C /* HomeViewModelTests.swift in Sources */,
-				081500AE2BCA955000EE2F1C /* PingAppTests.swift in Sources */,
+				081500AE2BCA955000EE2F1C /* PingMasterTests.swift in Sources */,
 				081501492BCB46BF00EE2F1C /* MockCoordinator.swift in Sources */,
 				081501442BCB462600EE2F1C /* SwiftUI+Extension.swift in Sources */,
 				081501532BCB4AD000EE2F1C /* MockAPIClient.swift in Sources */,

@@ -11,14 +11,21 @@ import Foundation
 
 @MainActor
 class HomeViewModelTests: XCTestCase {
-    var viewModel: HomeViewModel!
-    var mockFetchHostUseCase: MockFetchAllHostsUseCase!
-    var mockFindLatencyUseCase: MockFindLatencyUseCase!
+    private var viewModel: HomeViewModel!
+    private var mockFetchHostUseCase: MockFetchAllHostsUseCase!
+    private var mockFindLatencyUseCase: MockFindLatencyUseCase!
+    private var sortLatencyListUseCase: MockSortLatencyListUseCase!
+    private var testResults: [LatencyResult] = []
 
     override func setUp() {
         super.setUp()
-
-        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse))
+        sortLatencyListUseCase = MockSortLatencyListUseCase()
+        testResults = [
+            MockResponse.latencyResult,
+            MockResponse.latencyResultTwo
+        ]
+        sortLatencyListUseCase.mockResults = testResults
+        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse), sortLatencyListUseCase: sortLatencyListUseCase)
 
     }
 
@@ -26,6 +33,7 @@ class HomeViewModelTests: XCTestCase {
         viewModel = nil
         mockFetchHostUseCase = nil
         mockFindLatencyUseCase = nil
+        sortLatencyListUseCase = nil
         super.tearDown()
     }
 
@@ -48,7 +56,7 @@ class HomeViewModelTests: XCTestCase {
     }
 
     func testRetryLoadAllLatency() throws {
-        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse))
+        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse), sortLatencyListUseCase: sortLatencyListUseCase)
 
         let exp = XCTestExpectation(description: "TestRetryLoadAllLatency")
         XCTAssertEqual(viewModel.latencyResults.count, 0)
@@ -75,6 +83,7 @@ class HomeViewModelTests: XCTestCase {
             XCTAssertEqual(viewModel.viewState, HomeViewState.finished)
             let hosts = try XCTUnwrap(viewModel.hostResults)
             XCTAssertTrue(hosts.count > 0)
+            viewModel.handle(.onTapShowRetry)
             viewModel.handle(.onTapItem(try XCTUnwrap(hosts.first?.url)))
             let latency = try XCTUnwrap(viewModel.latencyResults.first?.latency)
             XCTAssertGreaterThan(latency, 0)
@@ -104,7 +113,7 @@ class HomeViewModelTests: XCTestCase {
 
     func testFetchLatencyResultsFailure() throws {
         let exp = XCTestExpectation(description: "TestFetchLatencyResultsFailure")
-        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.failure(error: APIError.applicationError), findLatencyUseCase: MockFindLatencyUseCase.failure(error: APIError.applicationError))
+        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.failure(error: APIError.applicationError), findLatencyUseCase: MockFindLatencyUseCase.failure(error: APIError.applicationError), sortLatencyListUseCase: sortLatencyListUseCase)
 
         viewModel.fetchAllHostsData()
         XCTAssertEqual(viewModel.viewState, HomeViewState.isLoading)
@@ -120,7 +129,7 @@ class HomeViewModelTests: XCTestCase {
 
     func testFetchLatencyFailure() throws {
         let exp = XCTestExpectation(description: "TestFetchLatencyFailure")
-        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.failure(error: APIError.applicationError))
+        viewModel = HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.failure(error: APIError.applicationError), sortLatencyListUseCase: sortLatencyListUseCase)
 
         viewModel.fetchAllHostsData()
         let result = XCTWaiter.wait(for: [exp], timeout: 0.5)
@@ -129,6 +138,17 @@ class HomeViewModelTests: XCTestCase {
         } else {
             XCTFail("Test Failed: FetchLatency Failure")
         }
+    }
+
+    func testLatencySorting() {
+        let descendingResults = [
+            MockResponse.latencyResultTwo,
+            MockResponse.latencyResult
+        ]
+        XCTAssertNotEqual(viewModel.latencyResults.first?.host, testResults.first?.host, "The sorted results should match the mock results.")
+        sortLatencyListUseCase.mockResults = descendingResults
+        viewModel.handle(.onTapSorting)
+        XCTAssertEqual(viewModel.latencyResults.first?.host, descendingResults.first?.host, "The sorted results should match the mock results.")
     }
 
 }

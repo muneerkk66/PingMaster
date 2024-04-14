@@ -18,11 +18,9 @@ struct HostView: View {
                 Image(systemName: "arrow.down.circle.dotted")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25) // Adjust size as needed
+                    .frame(width: 25, height: 25)
                     .foregroundColor(.blue)
-
             }
-
             LazyImage(url: URL(string: latency.imageUrl ?? ""))
                 .scaledToFit()
                 .frame(width: 50, height: 50)
@@ -30,9 +28,7 @@ struct HostView: View {
             Text(latency.name)
                 .font(.headline)
                 .foregroundColor(.black)
-
             Spacer()
-
             LatencyView(latency: latency)
 
         }.animation(.bouncy, value: showRetry)

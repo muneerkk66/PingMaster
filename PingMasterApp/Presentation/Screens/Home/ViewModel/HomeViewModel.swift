@@ -14,6 +14,7 @@ final class HomeViewModel: ObservableObject {
     private let coordinator: HomeCoordinatorProtocol
     private let fetchHostsUseCase: FetchAllHostsUseCase
     private let findLatencyUseCase: FindLatencyUseCase
+    private let sortLatencyListUseCase: SortLatencyListUseCase
 
     @Published var latencyResults: [LatencyResult] = []
     @Published var viewState: HomeViewState = .idle
@@ -22,10 +23,11 @@ final class HomeViewModel: ObservableObject {
     private(set) var hostResults: [HostResponse] = []
     private var disposables = Set<AnyCancellable>()
 
-    init(coordinator: HomeCoordinatorProtocol, fetchHostsUseCase: FetchAllHostsUseCase, findLatencyUseCase: FindLatencyUseCase) {
+    init(coordinator: HomeCoordinatorProtocol, fetchHostsUseCase: FetchAllHostsUseCase, findLatencyUseCase: FindLatencyUseCase, sortLatencyListUseCase: SortLatencyListUseCase) {
         self.coordinator = coordinator
         self.fetchHostsUseCase = fetchHostsUseCase
         self.findLatencyUseCase = findLatencyUseCase
+        self.sortLatencyListUseCase = sortLatencyListUseCase
     }
 
     @MainActor
@@ -34,12 +36,7 @@ final class HomeViewModel: ObservableObject {
         case .loadAllHosts, .retryLoadAllHosts:
             fetchAllHostsData()
         case .onTapItem(let host):
-            if showRetry {
-                findLatency(hosts: [host])
-            } else {
-                coordinator.showDetailView(host: host)
-                showRetry = false
-            }
+            handleTapItem(host: host)
         case .onTapSorting:
             isAscending.toggle()
             sortResult()
@@ -47,6 +44,16 @@ final class HomeViewModel: ObservableObject {
             findLatency(hosts: [host])
         case .onTapShowRetry:
             showRetry.toggle()
+        }
+    }
+
+    @MainActor
+    func handleTapItem(host: String) {
+        if showRetry {
+            findLatency(hosts: [host])
+        } else {
+            coordinator.showDetailView(host: host)
+            showRetry = false
         }
     }
 
@@ -102,21 +109,9 @@ final class HomeViewModel: ObservableObject {
             .store(in: &disposables)
     }
 
-    // TODO: This can be improved by using a new use case for sorting.
     func sortResult() {
-        latencyResults = latencyResults.sorted { first, second in
-            // Treat greatestFiniteMagnitude latency as the largest possible value so it sorts last
-            if first.latency == Double.greatestFiniteMagnitude {
-                return false
-            } else if second.latency == Double.greatestFiniteMagnitude {
-                return true
-            } else if isAscending {
-                return first.latency < second.latency
-            } else {
-                return first.latency > second.latency
-            }
-        }
-
+        latencyResults = sortLatencyListUseCase.execute(results: latencyResults, isAscending: isAscending)
+        print(latencyResults)
     }
 
 }

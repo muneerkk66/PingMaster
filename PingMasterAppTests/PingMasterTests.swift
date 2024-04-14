@@ -10,14 +10,18 @@ import SnapshotTesting
 @testable import PingMaster
 
 @MainActor
-final class PingAppTests: XCTestCase {
+final class PingMasterTests: XCTestCase {
+    var homeCoordinator: MockHomeCoordinator!
+    var sortLatencyListUseCase: SortLatencyListUseCase!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        homeCoordinator = MockHomeCoordinator()
+        sortLatencyListUseCase = MockSortLatencyListUseCase()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        homeCoordinator = nil
+        sortLatencyListUseCase = nil
     }
 
     func testCoordinatorView ( ) {
@@ -26,13 +30,13 @@ final class PingAppTests: XCTestCase {
     }
 
     func testDefaultAppearanceWithSuccess ( ) {
-        let contentView = HomeView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse)))
+        let contentView = HomeView(viewModel: HomeViewModel(coordinator: self.homeCoordinator, fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse), sortLatencyListUseCase: self.sortLatencyListUseCase))
 
         assertSnapshot(of: contentView.toVC(), as: .image, timeout: 10)
     }
 
     func testDefaultAppearanceWithError ( ) {
-        let contentView = HomeView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.failure(error: APIError.applicationError), findLatencyUseCase: MockFindLatencyUseCase.failure(error: APIError.applicationError)))
+        let contentView = HomeView(viewModel: HomeViewModel(coordinator: self.homeCoordinator, fetchHostsUseCase: MockFetchAllHostsUseCase.failure(error: APIError.applicationError), findLatencyUseCase: MockFindLatencyUseCase.failure(error: APIError.applicationError), sortLatencyListUseCase: self.sortLatencyListUseCase))
 
         assertSnapshot(of: contentView.toVC(), as: .image, timeout: 10)
     }
