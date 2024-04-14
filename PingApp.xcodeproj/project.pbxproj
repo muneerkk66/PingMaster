@@ -67,6 +67,7 @@
 		081501532BCB4AD000EE2F1C /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501522BCB4AD000EE2F1C /* MockAPIClient.swift */; };
 		081501572BCB56A300EE2F1C /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */; };
 		0822C8712BCBCA8B00653580 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0822C8702BCBCA8B00653580 /* Localizable.xcstrings */; };
+		0822C8732BCBD56000653580 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0822C8722BCBD56000653580 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +147,7 @@
 		081501522BCB4AD000EE2F1C /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
 		081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		0822C8702BCBCA8B00653580 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0822C8722BCBD56000653580 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 		081500902BCA954F00EE2F1C = {
 			isa = PBXGroup;
 			children = (
+				0822C8722BCBD56000653580 /* README.md */,
 				0815009B2BCA954F00EE2F1C /* PingApp */,
 				081500AC2BCA955000EE2F1C /* PingAppTests */,
 				081500B62BCA955000EE2F1C /* PingAppUITests */,
@@ -245,25 +248,25 @@
 		081500C92BCACEF800EE2F1C /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				081500CA2BCACF0600EE2F1C /* DI */,
+				081500CA2BCACF0600EE2F1C /* DependencyInjection */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		081500CA2BCACF0600EE2F1C /* DI */ = {
+		081500CA2BCACF0600EE2F1C /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
 				081500CB2BCACF2800EE2F1C /* Resolver.swift */,
 			);
-			path = DI;
+			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 		081500D02BCAD03100EE2F1C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				081500D32BCAD05500EE2F1C /* Repositories */,
-				081500D22BCAD04400EE2F1C /* Network */,
 				081500D12BCAD03E00EE2F1C /* Mapper */,
+				081500D22BCAD04400EE2F1C /* Network */,
+				081500D32BCAD05500EE2F1C /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -299,9 +302,9 @@
 		081500D42BCAD06900EE2F1C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				081500D72BCAD08E00EE2F1C /* UseCases */,
-				081500D62BCAD07D00EE2F1C /* Entities */,
 				081500D52BCAD07600EE2F1C /* Interfaces */,
+				081500D62BCAD07D00EE2F1C /* Entities */,
+				081500D72BCAD08E00EE2F1C /* UseCases */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -399,9 +402,9 @@
 		081500F82BCAD4A200EE2F1C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				081500F92BCAD4B100EE2F1C /* Coordinator */,
 				081501222BCAE5C400EE2F1C /* ViewModel */,
 				081501002BCAD56300EE2F1C /* View */,
-				081500F92BCAD4B100EE2F1C /* Coordinator */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 			files = (
 				081500A42BCA955000EE2F1C /* Preview Assets.xcassets in Resources */,
 				081500A12BCA955000EE2F1C /* Assets.xcassets in Resources */,
+				0822C8732BCBD56000653580 /* README.md in Resources */,
 				0822C8712BCBCA8B00653580 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,6 +852,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -877,6 +882,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1012,8 +1018,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/muneerkk66/NetWorkPinger.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 		081500CD2BCACFEA00EE2F1C /* XCRemoteSwiftPackageReference "Swinject" */ = {
