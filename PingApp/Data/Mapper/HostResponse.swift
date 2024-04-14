@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HostResponse: Decodable {
+struct HostResponse: Codable {
     let name: String
     let url: String
     let icon: String

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0815009D2BCA954F00EE2F1C /* PingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815009C2BCA954F00EE2F1C /* PingAppApp.swift */; };
-		0815009F2BCA954F00EE2F1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815009E2BCA954F00EE2F1C /* ContentView.swift */; };
 		081500A12BCA955000EE2F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081500A02BCA955000EE2F1C /* Assets.xcassets */; };
 		081500A42BCA955000EE2F1C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 081500A32BCA955000EE2F1C /* Preview Assets.xcassets */; };
 		081500AE2BCA955000EE2F1C /* PingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081500AD2BCA955000EE2F1C /* PingAppTests.swift */; };
@@ -58,6 +57,16 @@
 		0815013A2BCB394F00EE2F1C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501392BCB394F00EE2F1C /* Strings.swift */; };
 		0815013C2BCB3B5400EE2F1C /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */; };
 		0815013E2BCB3D1C00EE2F1C /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815013D2BCB3D1C00EE2F1C /* Formatter.swift */; };
+		081501412BCB45DA00EE2F1C /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 081501402BCB45DA00EE2F1C /* SnapshotTesting */; };
+		081501442BCB462600EE2F1C /* SwiftUI+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501432BCB462600EE2F1C /* SwiftUI+Extension.swift */; };
+		081501462BCB464400EE2F1C /* CombinePublisherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501452BCB464400EE2F1C /* CombinePublisherTest.swift */; };
+		081501492BCB46BF00EE2F1C /* MockCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501482BCB46BF00EE2F1C /* MockCoordinator.swift */; };
+		0815014B2BCB470D00EE2F1C /* MockFetchHostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815014A2BCB470C00EE2F1C /* MockFetchHostsUseCase.swift */; };
+		0815014D2BCB47CE00EE2F1C /* MockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815014C2BCB47CE00EE2F1C /* MockResponse.swift */; };
+		0815014F2BCB486500EE2F1C /* MockFindLatencyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0815014E2BCB486500EE2F1C /* MockFindLatencyUseCase.swift */; };
+		081501512BCB4A7800EE2F1C /* HostServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501502BCB4A7800EE2F1C /* HostServiceTests.swift */; };
+		081501532BCB4AD000EE2F1C /* MockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501522BCB4AD000EE2F1C /* MockAPIClient.swift */; };
+		081501572BCB56A300EE2F1C /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +89,6 @@
 /* Begin PBXFileReference section */
 		081500992BCA954F00EE2F1C /* PingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0815009C2BCA954F00EE2F1C /* PingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingAppApp.swift; sourceTree = "<group>"; };
-		0815009E2BCA954F00EE2F1C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		081500A02BCA955000EE2F1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		081500A32BCA955000EE2F1C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		081500A92BCA955000EE2F1C /* PingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +137,15 @@
 		081501392BCB394F00EE2F1C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		0815013B2BCB3B5400EE2F1C /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		0815013D2BCB3D1C00EE2F1C /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		081501432BCB462600EE2F1C /* SwiftUI+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Extension.swift"; sourceTree = "<group>"; };
+		081501452BCB464400EE2F1C /* CombinePublisherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePublisherTest.swift; sourceTree = "<group>"; };
+		081501482BCB46BF00EE2F1C /* MockCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoordinator.swift; sourceTree = "<group>"; };
+		0815014A2BCB470C00EE2F1C /* MockFetchHostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchHostsUseCase.swift; sourceTree = "<group>"; };
+		0815014C2BCB47CE00EE2F1C /* MockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponse.swift; sourceTree = "<group>"; };
+		0815014E2BCB486500EE2F1C /* MockFindLatencyUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockFindLatencyUseCase.swift; sourceTree = "<group>"; };
+		081501502BCB4A7800EE2F1C /* HostServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostServiceTests.swift; sourceTree = "<group>"; };
+		081501522BCB4AD000EE2F1C /* MockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIClient.swift; sourceTree = "<group>"; };
+		081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				081501412BCB45DA00EE2F1C /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +207,6 @@
 				081500DC2BCAD0C200EE2F1C /* API */,
 				081500DD2BCAD0D700EE2F1C /* Utils */,
 				0815009C2BCA954F00EE2F1C /* PingAppApp.swift */,
-				0815009E2BCA954F00EE2F1C /* ContentView.swift */,
 				081500A02BCA955000EE2F1C /* Assets.xcassets */,
 				081500A22BCA955000EE2F1C /* Preview Content */,
 			);
@@ -207,7 +224,11 @@
 		081500AC2BCA955000EE2F1C /* PingAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				081501472BCB46B000EE2F1C /* Mocks */,
+				081501422BCB461200EE2F1C /* Utils */,
 				081500AD2BCA955000EE2F1C /* PingAppTests.swift */,
+				081501502BCB4A7800EE2F1C /* HostServiceTests.swift */,
+				081501562BCB56A300EE2F1C /* HomeViewModelTests.swift */,
 			);
 			path = PingAppTests;
 			sourceTree = "<group>";
@@ -432,6 +453,27 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		081501422BCB461200EE2F1C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				081501432BCB462600EE2F1C /* SwiftUI+Extension.swift */,
+				081501452BCB464400EE2F1C /* CombinePublisherTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		081501472BCB46B000EE2F1C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0815014E2BCB486500EE2F1C /* MockFindLatencyUseCase.swift */,
+				081501482BCB46BF00EE2F1C /* MockCoordinator.swift */,
+				0815014A2BCB470C00EE2F1C /* MockFetchHostsUseCase.swift */,
+				0815014C2BCB47CE00EE2F1C /* MockResponse.swift */,
+				081501522BCB4AD000EE2F1C /* MockAPIClient.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -471,6 +513,9 @@
 				081500AB2BCA955000EE2F1C /* PBXTargetDependency */,
 			);
 			name = PingAppTests;
+			packageProductDependencies = (
+				081501402BCB45DA00EE2F1C /* SnapshotTesting */,
+			);
 			productName = PingAppTests;
 			productReference = 081500A92BCA955000EE2F1C /* PingAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -529,6 +574,7 @@
 				081500C62BCA956B00EE2F1C /* XCRemoteSwiftPackageReference "NetWorkPinger" */,
 				081500CD2BCACFEA00EE2F1C /* XCRemoteSwiftPackageReference "Swinject" */,
 				081501302BCB0B0D00EE2F1C /* XCRemoteSwiftPackageReference "Nuke" */,
+				0815013F2BCB45DA00EE2F1C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 0815009A2BCA954F00EE2F1C /* Products */;
 			projectDirPath = "";
@@ -604,7 +650,6 @@
 				0815012D2BCB003E00EE2F1C /* HostView.swift in Sources */,
 				0815013C2BCB3B5400EE2F1C /* NetworkMonitor.swift in Sources */,
 				081500E32BCAD24300EE2F1C /* APIEnvironment+Live.swift in Sources */,
-				0815009F2BCA954F00EE2F1C /* ContentView.swift in Sources */,
 				081500E12BCAD20C00EE2F1C /* APIRequest.swift in Sources */,
 				081501022BCAD58600EE2F1C /* HomeView.swift in Sources */,
 				0815013A2BCB394F00EE2F1C /* Strings.swift in Sources */,
@@ -622,7 +667,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0815014D2BCB47CE00EE2F1C /* MockResponse.swift in Sources */,
+				0815014B2BCB470D00EE2F1C /* MockFetchHostsUseCase.swift in Sources */,
+				0815014F2BCB486500EE2F1C /* MockFindLatencyUseCase.swift in Sources */,
+				081501512BCB4A7800EE2F1C /* HostServiceTests.swift in Sources */,
+				081501462BCB464400EE2F1C /* CombinePublisherTest.swift in Sources */,
+				081501572BCB56A300EE2F1C /* HomeViewModelTests.swift in Sources */,
 				081500AE2BCA955000EE2F1C /* PingAppTests.swift in Sources */,
+				081501492BCB46BF00EE2F1C /* MockCoordinator.swift in Sources */,
+				081501442BCB462600EE2F1C /* SwiftUI+Extension.swift in Sources */,
+				081501532BCB4AD000EE2F1C /* MockAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,6 +1024,14 @@
 				minimumVersion = 12.5.0;
 			};
 		};
+		0815013F2BCB45DA00EE2F1C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.16.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -987,6 +1049,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 081501302BCB0B0D00EE2F1C /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
+		};
+		081501402BCB45DA00EE2F1C /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0815013F2BCB45DA00EE2F1C /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
