@@ -11,8 +11,8 @@ import Foundation
 final class HostServiceTests: XCTestCase {
     var model: HostServiceLive!
     override func setUpWithError() throws {
-		let client = MockAPIClient.success(with: [MockResponse.hostResponse])
-		model = HostServiceLive(apiClient: client)
+        let client = MockAPIClient.success(with: [MockResponse.hostResponse])
+        model = HostServiceLive(apiClient: client)
 
     }
 
@@ -23,8 +23,8 @@ final class HostServiceTests: XCTestCase {
     func testFetchAlHosts() throws {
         let result = try awaitPublisher(model.fetchAllHosts())
         XCTAssertTrue(try XCTUnwrap(result.count) > 0)
-		XCTAssertNotNil(try XCTUnwrap(result.first).url)
-		XCTAssertNotNil(try XCTUnwrap(result.first).icon)
+        XCTAssertNotNil(try XCTUnwrap(result.first).url)
+        XCTAssertNotNil(try XCTUnwrap(result.first).icon)
 
     }
 

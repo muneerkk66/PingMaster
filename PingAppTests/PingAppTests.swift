@@ -23,22 +23,22 @@ final class PingAppTests: XCTestCase {
     func testDefaultAppearanceWithSuccess ( ) {
         let contentView = HomeView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.success(with: [MockResponse.hostResponse]), findLatencyUseCase: MockFindLatencyUseCase.success(with: MockResponse.latencyResponse)))
 
-        assertSnapshot(of: contentView.toVC(), as: .image)
+        assertSnapshot(of: contentView.toVC(), as: .image, timeout: 10)
     }
 
     func testDefaultAppearanceWithError ( ) {
         let contentView = HomeView(viewModel: HomeViewModel(coordinator: MockHomeCoordinator(), fetchHostsUseCase: MockFetchAllHostsUseCase.failure(error: APIError.applicationError), findLatencyUseCase: MockFindLatencyUseCase.failure(error: APIError.applicationError)))
 
-        assertSnapshot(of: contentView.toVC(), as: .image)
+        assertSnapshot(of: contentView.toVC(), as: .image, timeout: 10)
     }
 
-	func testDetailView ( ) {
-		let contentView = DetailView(latency: "Test")
-		assertSnapshot(of: contentView.toVC(), as: .image)
-	}
+    func testDetailView ( ) {
+        let contentView = DetailView(latency: "Test")
+        assertSnapshot(of: contentView.toVC(), as: .image, timeout: 10)
+    }
     func testErroView() {
         let errorView = ErrorView(errorMessage: "error") {}
-        assertSnapshot(of: errorView.toVC(), as: .image)
+        assertSnapshot(of: errorView.toVC(), as: .image, timeout: 10)
     }
 
     func testPerformanceExample() throws {

@@ -18,9 +18,9 @@ final class HomeViewModel: ObservableObject {
     @Published var latencyResults: [LatencyResult] = []
     @Published var viewState: HomeViewState = .idle
     @Published var showRetry: Bool = false
-    private var isAscending = true
+    private(set) var isAscending = true
+    private(set) var hostResults: [HostResponse] = []
     private var disposables = Set<AnyCancellable>()
-    private var hostResults: [HostResponse] = []
 
     init(coordinator: HomeCoordinatorProtocol, fetchHostsUseCase: FetchAllHostsUseCase, findLatencyUseCase: FindLatencyUseCase) {
         self.coordinator = coordinator
